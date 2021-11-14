@@ -1,0 +1,38 @@
+//variables
+
+$maincolor: black;
+$contrastcolor: white;
+
+// mixins
+@mixin white-text-black-bg {
+    color: $contrastcolor;
+    background-color: $maincolor
+}
+
+@mixin black-text-white-bg {
+    color: $maincolor;
+    background-color: $contrastcolor
+}
+
+//header
+//nav is a glorified div
+nav {
+    @include white-text-black-bg;
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+        @include white-text-black-bg;
+        text-decoration: none;
+
+        div {
+            margin: 10px;
+            font-size: large;
+        }
+    }
+
+    
+}
+img {
+    width: 30%;
+}
